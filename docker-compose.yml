@@ -1,0 +1,16 @@
+services:
+  mysqldb:
+    image: sujith29/bloodapp:dbimage
+    container_name: mysqldb
+    ports:
+      - "3306:3306"
+    restart: always
+
+  app:
+    image: sujith29/bloodapp:appimage
+    container_name: appcont
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - mysqldb
