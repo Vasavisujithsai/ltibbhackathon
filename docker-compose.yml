@@ -10,7 +10,7 @@ services:
     image: sujith29/bloodapp:appimage
     container_name: appcont
     ports:
-      - "8080:1111"
+      - "1111:8080"
     restart: always
     depends_on:
       - mysqldb
